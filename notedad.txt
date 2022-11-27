@@ -1,1 +1,40 @@
-sikandar ali : wm-71413
+function=>reuse
+define=>create funct
+call =>use function 
+
+prefined=>build in =>call 
+exp : prompt,date(),alert()
+user defined  =>defined ,call
+
+function funcname(){=>define
+block scope
+///statements
+}
+
+
+funcname()=>call
+
+void main(){}
+int main(){}
+
+button =>
+login=>smit quiz=>login
+com1=>login
+
+scope=>
+global =>variable outside func,class ,method 
+local scope=>only block scope access 
+
+ascii code =>48 and 57
+space 32
+
+valid 
+insert
+
+
+
+
+
+
+
+
