@@ -1,100 +1,54 @@
-// var inp =10
+var email = document.getElementById("email")//global
+var password = document.getElementById("password")//global
+var eye = document.getElementById("pchg")
+var emailtext = document.getElementById("emailtxt")
+var passwordtxt = document.getElementById("passwordtxt")
+var passwordctxt = document.getElementById("passwordctxt")
+var newtext = document.getElementById("txt")
+getpass = "123"
+function getdata(){
+    event.preventDefault()//form 
+     //local variable
 
-// function call(){
-//     var inp = prompt("enter data ")
-//     if(isNaN(inp)){
-//         console.log("invalid data")
+     console.log(email.value) 
+     if(email.value=="" && password.value =="" ){
+        emailtext.className="show red"
+        passwordtxt.className="show red"
+        // newtext.innerText="enter email and password"
+       
+     }
+     else if(email.value==""){
+        emailtext.className="show red" 
+        passwordtxt.className="hide red"
+        // newtext.innerText="enter email"
+     }
+     else if(password.value==""){
+        emailtext.className="hide"
+        passwordtxt.className="show red"
+        // newtext.innerText="enter password"
+     }
+     
+    else if(password.value!=getpass){
+        passwordtxt.className="hide red"
+        passwordctxt.className="show red"
+        eye.className="show"
+     }
+     else{
+        passwordctxt.className="hide"
+        eye.className="hide"
 
-//     }
-//     else{
-//         showname(inp)
+     }
 
-//     } 
-
-// }
-
-// function showname(na){
-//     if(na%2==0){
-//         console.log("even")
-//     }
-//     else{
-//         console.log("odd numb")
-//     }
-// }
-// call()
-
-
-var array = ["data", "smithyd", "ali"]
-// USERNAME =>
-// user name input =>
-// second check =>
-// space,number =>invalid
-// charcodeAt
-// array check =>already use or use  
-// a & B
-// SMIT hyderabad123
-
-function userdata() {
-    var inp = prompt("enter data ")
-    if (inp == null) {
-        console.log("must enter data ")
-
-    }
-    else {
-        checkvalidate(inp)
-    }
-    //
-}
-
-function checkvalidate(name) {
-    var chk = true
-    for (var i = 0; i < name.length; i++) {
-        console.log(name[i])
-        if (name.charCodeAt(i) == 32 || name.charCodeAt(i) >= 48 && name.charCodeAt(i) <= 57) {
-            // console.log("invalid")
-            chk = false
-            break
-        }
-    }
-    if (chk == true) {
-        console.log("valid data ")
-        checkusernamedb(name)
-    }
-    else {
-        console.log("invalid data")
-    }
-}
-
-function checkusernamedb(data) {
-    var chk = true
-    for (var j = 0; j < array.length; j++) {
-        if (array[j] == data) {
-            chk = false
-            break
-
-        }
-    }
-    if (chk == true) {
-        console.log("you this username")
-        array.push(data)
-        console.log(array)
-    }
-    else {
-        console.log("already use")
-
-    }
 
 }
 
-userdata()
+function chgpassword(){
+    event.preventDefault()
+    if(password.type=="text"){
+        password.type="password"
 
-
-
-
-
-
-
-
-
-
-
+    }
+    else{
+        password.type="text"
+    }
+}

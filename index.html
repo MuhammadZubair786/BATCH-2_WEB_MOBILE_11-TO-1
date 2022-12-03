@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: inline;
+        }
+        .red{
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
+    <form action="">
+        <input type="text" name="" id="email">
+        <b class="hide" id="emailtxt">enter email </b>
+        <input type="password" name="" id="password">
+        <b class="hide" id="passwordtxt">enter password </b>
+        <b class="hide" id="passwordctxt">password not match </b>
+        
+        <b id="txt"></b>
+        <button id="pchg" onclick="chgpassword()" class="hide">eye</button>
 
 
-    
+        <button type="submit" onclick="getdata()">click</button>
+
+    </form>
+
     <script src="app.js"></script>
 </body>
+
 </html>
