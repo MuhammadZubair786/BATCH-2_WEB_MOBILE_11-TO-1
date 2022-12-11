@@ -6,86 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
+    <style>
+        .list_item{
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div style="width: 80%;margin: 0px auto;">
-    <div class="container text-center mt-2">
-        <div class="row">
-            <div class="col col-lg-8">
-                <input type="text" name="" id="textdata" size="50">
-            </div>
-        </div>
-        
-        <div class="row mt-2">
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">1</button>
-            </div>
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">2</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">3</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">+</button>
-         </div>
-            
-         </div>
-         <div class="row mt-2">
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">4</button>
-            </div>
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">5</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">6</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">-</button>
-         </div>
-            
-         </div>
-         <div class="row mt-2">
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">7</button>
-            </div>
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">8</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">9</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="showdata(this)">*</button>
-         </div>
-            
-         </div>
-         <div class="row mt-2">
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="clear1()">clear</button>
-            </div>
-            <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="backlsp()">backsp</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="sqr()">sqrt</button>
-         </div>
-         <div class="col col-lg-2 col-md-2 col-2 col-sm-2">
-             <button type="button" class="btn btn-success" onclick="result()">=</button>
-         </div>
-            
-         </div>
+    <!-- <div id="id1">hello</div>
+    <div id="id1">user</div> -->
+
+    <!-- <input type="text" id="bt1" >
+
+    <div class="class1">hello</div>
+    <div class="class1">user
+        <p>hELLO</p>
+        <p>Hello user p2
+            <a href="#" id="click">see more</a>
+        </p>
     </div>
+    <div class="class1">three</div>
+    <div></div> -->
+
+    <input type="text" name="" id="text">
+    <button id="BUTTON_CLICK">click</button>
+
+    <!-- <ul id="ulist">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+
+    <!-- <b>
+        hello user
+    </b> -->
+
+    <img
+    id="img12"
+    src="data:image/jpeg;base64,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" alt="">
+    <div>
+        <button disabled id="pre" onclick="pre1()">Previous</button>
+        <button onclick="next()">Next</button>
+        <!-- <button>Last</button> -->
+
     </div>
-
-
-
     <script src="app.js"></script>
 </body>
 
