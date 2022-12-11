@@ -1,0 +1,23 @@
+documentgetElementid=>one
+class=>array 
+index
+
+[INDEX].innerText
+[INDEX].innerHTML
+
+.addEventListener("event",function(){})
+
+clasname
+tag 
+index number
+
+id=>
+
+
+setAttrbuite=>("attrname","value")
+getAttrbuite=>("attr"|)
+remove Attribute=>("attr")
+
+
+
+
