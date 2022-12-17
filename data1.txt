@@ -1,0 +1,25 @@
+hasAttrbuite=>check present=>1(att_name) 
+setAttrbuite=>2(aname,a_value)
+getAtt=>value =>1
+removeAttr=>remove attr=>1
+
+
+
+createElement=>tag 
+createTextNode=>text insert 
+appendChild=>tag  data insert 
+parentNode=>
+remove
+childNodes
+NodeType
+nodename
+nodevalue 
+
+
+
+
+
+
+
+
+
