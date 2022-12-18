@@ -1,110 +1,102 @@
-// var h1 = document.getElementsByTagName("h1")
-// console.log(h1[0].innerHTML)
+// var arr =[
+//     ["asad","ali","smit"],
+//     ["asad1","ali","smit"],
+//     ["asad2","ali","smit"],
+//     ["asad3","ali","smit"],
+//     ["asad4","ali","smit"],
+//     ["asad5","ali","smit"],
+//     ["asad","ali","smit"],
+//     ["asad1","ali","smit"],
+//     ["asad2","ali","smit"],
+//     ["asad3","ali","smit"],
+//     ["asad4","ali","smit"],
+//     ["asad5","ali","smit"],
 
-// var btn = document.getElementsByTagName("button")
-// var get = h1[1].getAttribute("data")
-// console.log(get)
+// ]
 
-// btn[0].addEventListener("click",function(){
-//     console.log(h1[1].style.display)
-//     if(h1[1].hasAttribute("style")){
-//         if(h1[1].style.display=="none"){
-//             h1[1].setAttribute("style","display:block;color:green")
-
-//         }
-//         else{
-//             h1[1].setAttribute("style","display:none;color:green")
-
-//         }
-//     }
-//     else{
-//         console.log("not present")
-//     }
-
-
-//     // if(h1[1].style.display)
-//     // h1[1].setAttribute("style",'display:none')
-// })
-
-// has Attrbuite =>present
-
-// btn[0].addEventListener("click", function () {
-//     btn[1].setAttribute("disabled", true)
-
-//     i = 3
-
-//     btn[1].innerText = `wait ${i}  second`
-//     data = setInterval(() => {
-//         i -= 1
-//         // btn[1].removeAttribute("disabled")
-//         btn[1].innerText = `wait ${i}  second`
-//         if (i == 0) {
-//             clearInterval(data)
-//         }
-//     }, 1000)
-
-//     setTimeout(() => {
-//         btn[1].removeAttribute("disabled")
-//         btn[1].innerText = `click`
+var arr =[]
+var user_inp = prompt("enter row")
+for(var i=0;i<user_inp;i++){
+    arr.push([])
+    var col = prompt("Enter Col")
+    for(var j=0;j<col;j++){
+        var std_name = prompt("enter data")
+        arr[i].push(std_name)
+    }
 
 
-//     }, 3000)
-//     // btn[1].inner("hello user")
-// })
-
-// btn[1].addEventListener("click", function () {
-//     btn[0].setAttribute("disabled", true)
-//     setTimeout(() => {
-//         btn[0].removeAttribute("disabled")
-//     }, 3000)
-// })
-
-var btn = document.getElementsByTagName("button")
-var ul = document.getElementsByTagName("ul")
-var inp = document.getElementsByTagName("input")
-
-btn[0].addEventListener("click",function(){
-    var tagname  = document.createElement("li")
-    console.log(tagname)
-    console.log(inp[0].value)
-    var textnode = document.createTextNode(inp[0].value)
-    tagname.appendChild(textnode)
-    ul[0].appendChild(tagname)
-
-    var edit_button = document.createElement("button")
-    var edit_text = document.createTextNode("Edit")
-    edit_button.appendChild(edit_text)
-    edit_button.setAttribute("onclick","edit(this)")
-
-    console.log(edit_button)
-    edit_button.style.margin="5px"
-   tagname.appendChild(edit_button)
-   tagname.style.margin="10px"
-
-   var edit_button1 = document.createElement("button")
-    var edit_text1 = document.createTextNode("Delete")
-    edit_button1.appendChild(edit_text1)
-
-    edit_button1.setAttribute("onclick",'del(this)')
-
-    
-
-    console.log(edit_button1)
-    edit_button1.style.margin="5px"
-   tagname.appendChild(edit_button1)
-   tagname.style.margin="10px"
+}
+console.log(arr[0])
 
 
-})
 
-function edit(e){
-    console.log(e.parentNode.childNodes[0])
 
-    var p = prompt("enter data ",e.parentNode.childNodes[0].nodeValue)
 
-    e.parentNode.childNodes[0].nodeValue=p
+// for(var j=0;j<std.length;j++){
+//     var user_inp = prompt("enter data")
+//     std[j]=user_inp
+// }
+// console.log(std)
+
+// arr[0][0]=>2d 
+// arr[0].length
+var div = document.getElementsByTagName("div")
+
+var table = document.createElement("table")
+
+var t_head_row = document.createElement("tr")
+for(var i=0;i<3;i++){
+    if(i==0){
+        var th = document.createElement("th")
+        var text =  document.createTextNode("Name")
+        th.appendChild(text)
+        t_head_row.appendChild(th)
+    }
+    else if(i==1){
+        var th = document.createElement("th")
+        var text =  document.createTextNode("Data")
+        th.appendChild(text)
+        t_head_row.appendChild(th)
+    }
+    else if(i==2){
+        var th = document.createElement("th")
+        var text =  document.createTextNode("roll no")
+        th.appendChild(text)
+        t_head_row.appendChild(th)
+
+    }
+  
+
+   
+
 }
 
-function del(e){
-    e.parentNode.remove()
+table.appendChild(t_head_row)
+
+
+table.style.border="2px solid black"
+table.style.margin="5px"
+table.style.padding="5px"
+
+// console.log(table)
+for(var i in arr){
+    var tr= document.createElement("tr")
+    // console.log(tr)
+    for(var j in arr[i]){
+        // console.log(arr[i][j])
+        var td = document.createElement("td")
+        var text_node = document.createTextNode(arr[i][j])
+        td.appendChild(text_node)
+        console.log(td)
+        tr.appendChild(td)
+        td.style.borderBottom="1px solid red"
+        td.style.fontSize="30px"
+        td.style.padding="5px"
+        
+    }
+   
+    console.log(tr)
+    table.appendChild(tr)
 }
+
+div[0].appendChild(table)
