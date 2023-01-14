@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
+    <h1>Home page</h1>
+    <h2 id="name"></h2>
+    <h3 id="email"></h3>
 
-    <input type="email" id="email" placeholder="email">
-    <br>
-    <input type="password" name="" id="password" placeholder="password">
-    <br>
-    <input type="name" name="" id="name" placeholder="name">
-    <br>
-    <input type="button" value="Sign up" id="signup">
-    <br>
-    <input type="button" value="Sign in" id="signin">
+    <table border="1" style="width: 600px;">
+        <tr>
+            <td>S.no</td>
+            <td>User Name</td>
+            <td>Address</td>
+            <td>Contact</td>
+            <td>View</td>
+        </tr>
+    </table>
 
-
-
+    <br>
+    <button>ADD CONTACT LIST</button>
+    <button>Add Dish </button>
+    
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
@@ -42,7 +45,6 @@
 
 
     </script>
-    <script src="app.js"></script>
+    <script src="home.js"></script>
 </body>
-
 </html>
